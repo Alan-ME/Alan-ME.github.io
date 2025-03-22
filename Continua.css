@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+body {
+    font-family: "Fredoka One", sans-serif;
+    background: -webkit-radial-gradient(#3943ce, #0a0011);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 85%;
+    max-width: 1400px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.input-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h2 {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.chart-section {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 800px;
+    height: 500px !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .input-section, .chart-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    input, button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    canvas {
+        height: 400px !important;
+    }
+}
