@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Barras Dinámico</title>
+    <link rel="stylesheet" href="Discreta.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de entrada -->
+        <div class="input-section">
+            <h2>Ingrese un número total</h2>
+            <input type="number" id="totalInput" placeholder="Ej: 100" required step="any">
+            <button onclick="askPercentages()">Continuar</button>
+
+            <div id="percentageInputs" style="display: none;">
+                <h2>Ingrese porcentajes</h2>
+                <input type="number" id="percentageInput" placeholder="Ej: 20" required step="any">
+                <button onclick="addPercentage()">Agregar</button>
+                <button onclick="finalizeChart()">Finalizar</button>
+                <ul id="percentageList"></ul>
+                <p id="remainingPercentage">Porcentaje restante: 100%</p>
+            </div>
+        </div>
+
+        <!-- Sección del gráfico -->
+        <div class="chart-section">
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
